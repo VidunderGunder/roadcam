@@ -1,5 +1,6 @@
 import React from 'react';
 import useHover from './hooks/useHover';
+import icon from './camera-icon.svg';
 // import icon from './resources/camera-icon.png';
 
 export interface IMapMarkerProps {
@@ -19,7 +20,7 @@ export const MapMarker: React.FC<IMapMarkerProps> = ({
   label,
   iconAncor,
   popupAnchor,
-  // image = icon,
+  image = icon,
   iconSize = [40, 40],
   ...props
 }) => {
@@ -44,7 +45,7 @@ export const MapMarker: React.FC<IMapMarkerProps> = ({
           transform: hover && 'scale(1.1)',
         }}
       >
-        {/* <img
+        <img
           className="not-selectable"
           src={image}
           alt="map-icon-marker"
@@ -55,7 +56,7 @@ export const MapMarker: React.FC<IMapMarkerProps> = ({
               ? `drop-shadow(0 0.25rem 0.0700rem rgba(0, 0, 0, 0.075))`
               : `drop-shadow(0 0.15rem 0.0375rem rgba(0, 0, 0, 0.15))`,
           }}
-        /> */}
+        />
       </div>
       <Label>{label}</Label>
       {props.children}

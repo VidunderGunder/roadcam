@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react';
 import { MapMarker, IMapMarkerProps } from './map-marker';
 
 export default {
-  title: 'Example/MapMarker',
+  title: 'MapMarker',
   component: MapMarker,
   parameters: {
     layout: 'centered',

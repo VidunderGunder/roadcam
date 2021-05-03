@@ -4,11 +4,11 @@ import {
   useEffect,
   useCallback,
   useLayoutEffect,
-} from "react";
-import { throttle } from "throttle-debounce";
+} from 'react';
+import { throttle } from 'throttle-debounce';
 
 /**
- * Hover hook based on [the only reliableish way I've found to fire mouseleave-event](https://github.com/mjsarfatti/use-mouse-leave/), but flipped to return hover instead of mouseLeft
+ * Hover hook based on [the only reliableish way I've found to fire mouseleave-event](https://github.com/mjsarfatti/use-mouse-leave/), but flipped to return hover instead of mouseLeft.
  */
 export default function useHover() {
   const [mouseLeft, setMouseLeft] = useState(true);
@@ -36,7 +36,7 @@ export default function useHover() {
 
   // Start tracking the pointer when it enters our element
   const handleMouseEnter = useRef(() => {
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
   }).current;
 
   // See https://medium.com/@teh_builder/ref-objects-inside-useeffect-hooks-eb7c15198780
@@ -45,11 +45,11 @@ export default function useHover() {
     (node: HTMLElement | null) => {
       // Make sure to cleanup any events/references added to the last instance
       if (elementRef && elementRef.current) {
-        elementRef.current.removeEventListener("mouseenter", handleMouseEnter);
+        elementRef.current.removeEventListener('mouseenter', handleMouseEnter);
       }
 
       if (node !== null) {
-        node.addEventListener("mouseenter", handleMouseEnter);
+        node.addEventListener('mouseenter', handleMouseEnter);
 
         // Save a reference to the node
         elementRef.current = node;
@@ -62,9 +62,9 @@ export default function useHover() {
     // Cleanup events on component unmount
     return () => {
       if (elementRef && elementRef.current) {
-        elementRef.current.removeEventListener("mouseenter", handleMouseEnter);
+        elementRef.current.removeEventListener('mouseenter', handleMouseEnter);
       }
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [handleMouseEnter, handleMouseMove]);
 
@@ -75,7 +75,7 @@ export default function useHover() {
 
   useLayoutEffect(() => {
     if (mouseLeft) {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     }
   }, [mouseLeft, handleMouseMove]);
 

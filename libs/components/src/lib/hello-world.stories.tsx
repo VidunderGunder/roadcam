@@ -1,14 +1,16 @@
+import { Meta } from '@storybook/react';
 import React from 'react';
 import { HelloWorld, HelloWorldProps } from './hello-world';
 
 export default {
   component: HelloWorld,
-  title: 'Components',
-};
+  title: 'HelloWorld',
+  parameters: {
+    layout: 'centered',
+  },
+} as Meta;
 
 export const primary = () => {
-  /* eslint-disable-next-line */
   const props: HelloWorldProps = {};
-
   return <HelloWorld {...props} />;
 };
