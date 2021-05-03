@@ -1,0 +1,8 @@
+{
+  "CSS Prop": {
+    "prefix": "css",
+    "body": "css={css`$1`.toString()}",
+    "description": "Creates CSS property with IntelliSense support (using toString-workaround)",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact"
+  }
+}

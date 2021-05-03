@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Components from './components';
+import HelloWorld from './hello-world';
 
-describe('Components', () => {
+describe('HelloWorld', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Components />);
+    const { baseElement } = render(<HelloWorld />);
     expect(baseElement).toBeTruthy();
   });
 });
