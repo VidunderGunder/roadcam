@@ -48,7 +48,7 @@ export const MapView: React.FC<IMapViewProps> = ({
       <MapGL
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/mapbox/streets-v11"
+        mapStyle="mapbox://styles/mapbox/dark-v10"
         mapboxApiAccessToken={mapboxToken}
         onViewportChange={(nextViewport: MapboxStateSet) =>
           setViewport(nextViewport)

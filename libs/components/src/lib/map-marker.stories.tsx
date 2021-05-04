@@ -1,8 +1,9 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
-
-import { MapMarker, IMapMarkerProps } from './map-marker';
+import { MapMarker } from './map-marker';
+import { camExample } from './cam-info';
+import { use100vh } from 'react-div-100vh';
 
 export default {
   title: 'MapMarker',
@@ -12,13 +13,10 @@ export default {
   },
 } as Meta;
 
-export const Default = () => {
-  return (
-    <MapMarker
-      label={text('Label', 'Marker Label')}
-      iconSize={[40, 40]}
-      iconAnchor={[20, 20]}
-      popupAnchor={[0, -20]}
-    />
-  );
+export const WithoutCameraInfo = () => {
+  return <MapMarker label={text('Label', 'Marker Label')} />;
+};
+
+export const WithCameraInfo = () => {
+  return <MapMarker label={text('Label', 'Marker Label')} cam={camExample} />;
 };
