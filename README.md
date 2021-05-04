@@ -47,6 +47,7 @@ All proposals will be using [TypeScript](https://www.typescriptlang.org/) where 
 
 ~~Using [`create-react-app` with TypeScript template](https://create-react-app.dev/docs/adding-typescript/).~~
 
+- ~~Will work with almost anything (it's basically the `Hello World!` of modern web development)~~
 - ~~Instant deployment and hosting using [Vercel](https://vercel.com/)~~
 - ~~[Supports Unity3D with API](https://www.npmjs.com/package/react-unity-webgl)~~
 
@@ -54,6 +55,7 @@ All proposals will be using [TypeScript](https://www.typescriptlang.org/) where 
 
 ✅ **[NEXT](https://nextjs.org/) with [Express Middleware](https://nextjs.org/docs/api-routes/api-middlewares)**
 
+- Fully supported by [NX](https://nx.dev/latest/react/guides/nextjs)
 - Instant deployment and hosting using [Vercel](https://vercel.com/)
 - Server Side Rendering (SSR) out-of-the-box
 - Static Site Generation (SSG) out-of-the-box
@@ -76,7 +78,7 @@ _NEXT is a product of Vercel, so implementation may be more stable and developer
 
 ---
 
-Almost none of the extra features will be utilized here, but it's fun pretending this thing is gonna scale. 
+Almost none of the extra features will be utilized here, but it's fun pretending this thing is gonna scale. 📈
 
 I went with NEXT, as it cuts resources spent on development, scalability and deployment to a minimum. It also has lots of nice-to-have features, like server-side rendering and static site generation out-of-the-box.
 
@@ -112,22 +114,22 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ### Notes after some experimenting:
 
-<small>*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects.</small>
+<small>*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍</small>
 
-<small>**Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore.   
-Styled components has a similar feature set, but is more focused on solutions I don't enjoy. It's what I went with because of the CSS-prop, but in hindsight it brought with it so many complications it's not worth it (for me).  
-Styled JSX seems like a good alternative, by being a lot more simple and robust. It's also the default CSS-in-JS for NEXT.js.  
+<small>**Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
+Styled components has a similar feature set, but is more focused on solutions I don't enjoy. It's what I went with because of the CSS-prop, but in hindsight it brought with it so many complications it's not worth it (for me). 😔  
+Styled JSX seems like a good alternative, by being a lot more simple and robust. It's also the default CSS-in-JS for NEXT.js. 🤔  
 Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
-Maybe inline styles and the odd stylesheet isn't such a bad idea after all?
+Maybe inline styles and the odd stylesheet isn't such a bad idea after all? 🤷‍♂️
 </small>
 
-<small>***Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more.</small>
+<small>***Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more. 👌</small>
 
-<small>****This one's a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please!</small>
+<small>****This one's a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘</small>
 
-<small>*****Meh. The wrapper could've been typed better (so much googling :() and basic features are missing. Spent way to much time trying to get clustering to work with custom components. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
+<small>*****Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
 Couldn't find a good alternative.  
-Big sad.</small>
+Big sad.
 
 ---
 
