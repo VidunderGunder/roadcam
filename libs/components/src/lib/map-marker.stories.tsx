@@ -1,5 +1,6 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Meta } from '@storybook/react';
+import { text } from '@storybook/addon-knobs';
 
 import { MapMarker, IMapMarkerProps } from './map-marker';
 
@@ -11,15 +12,13 @@ export default {
   },
 } as Meta;
 
-const Template: Story<IMapMarkerProps> = (args) => <MapMarker {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  id: '123456',
-  coordinates: [0, 0],
-  type: 'Point',
-  label: 'Label',
-  iconSize: [40, 40],
-  iconAncor: [20, 20],
-  popupAnchor: [0, -20],
-} as IMapMarkerProps;
+export const Default = () => {
+  return (
+    <MapMarker
+      label={text('Label', 'Marker Label')}
+      iconSize={[40, 40]}
+      iconAnchor={[20, 20]}
+      popupAnchor={[0, -20]}
+    />
+  );
+};

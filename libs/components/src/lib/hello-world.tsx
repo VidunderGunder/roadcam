@@ -10,5 +10,3 @@ export const HelloWorld: React.VFC<HelloWorldProps> = (props) => {
     </div>
   );
 };
-
-export default HelloWorld;

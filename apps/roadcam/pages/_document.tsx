@@ -8,8 +8,10 @@ export default class CustomDocument extends Document<{
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />)
+    const page = renderPage(
+      (App: React.FC) => (
+        props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+      ) => sheet.collectStyles(<App {...props} />)
     );
 
     const styleTags = sheet.getStyleElement();

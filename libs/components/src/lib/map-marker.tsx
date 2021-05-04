@@ -1,57 +1,54 @@
 import React from 'react';
 import useHover from './hooks/useHover';
-import icon from './camera-icon.svg';
-// import icon from './resources/camera-icon.png';
+import CameraIcon from './camera-icon';
+import NotSelectable from './not-selectable';
+import { css } from 'styled-components';
 
 export interface IMapMarkerProps {
-  id: string;
-  coordinates: [number, number];
   label?: string;
   image?: string;
   iconSize?: [number, number];
-  iconAncor?: [number, number];
+  iconAnchor?: [number, number];
   popupAnchor?: [number, number];
 }
 
-export default MapMarker;
 export const MapMarker: React.FC<IMapMarkerProps> = ({
-  id,
-  coordinates,
   label,
-  iconAncor,
+  iconAnchor,
   popupAnchor,
-  image = icon,
-  iconSize = [40, 40],
+  image = CameraIcon,
+  iconSize = [25, 25],
   ...props
 }) => {
-  if (iconAncor === undefined) iconAncor = [iconSize[0] / 2, iconSize[1] / 2];
+  if (iconAnchor === undefined) iconAnchor = [iconSize[0] / 2, iconSize[1] / 2];
   if (popupAnchor === undefined) popupAnchor = [0, -iconSize[1] / 2];
 
   const [hoverRef, hover] = useHover();
 
   return (
     <div
-      className="not-selectable"
-      style={{
-        cursor: hover && 'pointer',
-      }}
+      css={`
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      `}
       ref={hoverRef}
       {...props}
     >
       <div
-        style={{
-          width: iconSize[0],
-          height: iconSize[1],
-          transform: hover && 'scale(1.1)',
-        }}
+        css={`
+          width: ${iconSize[0]}px;
+          height: ${iconSize[1]}px;
+          transform: scale(${hover ? 1.1 : 1.0});
+        `}
       >
-        <img
+        <CameraIcon
           className="not-selectable"
-          src={image}
-          alt="map-icon-marker"
           style={{
-            maxWidth: '100%',
-            maxHeight: '100%',
+            width: '100%',
+            height: '100%',
             filter: hover
               ? `drop-shadow(0 0.25rem 0.0700rem rgba(0, 0, 0, 0.075))`
               : `drop-shadow(0 0.15rem 0.0375rem rgba(0, 0, 0, 0.15))`,
@@ -67,15 +64,16 @@ export const MapMarker: React.FC<IMapMarkerProps> = ({
 const Label: React.FC = (props) => {
   if (props.children === undefined) return null;
   return (
-    <div
-      style={{
-        textAlign: 'center',
-        fontWeight: 500,
-        fontSize: '1rem',
-      }}
+    <NotSelectable
+      css={`
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.75rem;
+        filter: drop-shadow(0 0.075rem 0.06rem white);
+      `}
       {...props}
     >
       {props.children}
-    </div>
+    </NotSelectable>
   );
 };
