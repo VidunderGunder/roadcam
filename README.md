@@ -8,8 +8,8 @@
   - [Bonus](#bonus)
   - [Resources](#resources)
 - [Stack](#stack)
-  - [Project Architecture](#project-architecture)
-- [TODO](#todo)
+  - [Project Architecture and Main Tools](#project-architecture-and-main-tools)
+  - [Notes after some experimenting:](#notes-after-some-experimenting)
 
 ## Task
 
@@ -21,9 +21,9 @@ Create a small web application showing road camera information.
 - [x] Get a MapBox development access token and add MapBox to your project
 - [x] Download the data file (see resources below) and add it to your project
 - [x] Download the icon file (see resources below) and add it to your project
-- [ ] Add a marker for every road camera in the map view by loading them using a fetch GET
+- [x] Add a marker for every road camera in the map view by loading them using a fetch GET
 request from an express HTTP endpoint
-- [ ] Clicking a camera in the map should display information in a popup
+- [x] Clicking a camera in the map should display information in a popup
 
 ### Bonus
 
@@ -76,7 +76,9 @@ _NEXT is a product of Vercel, so implementation may be more stable and developer
 
 ---
 
-I went with NEXT, as it cuts resources spent on development, scalability and deployment to a minimum. It has lots of nice-to-have features, like server-side rendering and static site generation out-of-the-box.
+Almost none of the extra features will be utilized here, but it's fun pretending this thing is gonna scale. 
+
+I went with NEXT, as it cuts resources spent on development, scalability and deployment to a minimum. It also has lots of nice-to-have features, like server-side rendering and static site generation out-of-the-box.
 
 It might seem like overkill for a single page application, but given it's as easy to setup as a vanilla React app (if not easier) combined with Vercel's support for SSG and simple (and free) deployment, it makes sense.
 
@@ -94,12 +96,38 @@ PWAs are possible with this alternative, which allows for local app installation
 
 This is likely to change when PWAs become more widespread, though, assuming antitrust laws are following suit.
 
-Having all React-libraries at disposal is a huge plus (as opposed to React Native/Expo); especially the possibility to plugin Unity builds, in case we want to move map navigation or other features to Unity down the line.
+Having all React-libraries at disposal is a huge plus (as opposed to React Native/Expo); especially the possibility to use Unity builds, in case we want to move map navigation or other features to a more solid 3D-environment down the line.
 
-### Project Architecture
+### Project Architecture and Main Tools
 
-The project will be a monorepo using [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), for scalability and reusability (or mostly because I've wanted to try it out for some time).
+Well yeah... This may be a mess, or it may be awesome. I'll explore some new stuff I haven't really used before, so it'll be hit or miss for some of 'em:
 
-To enforce testable, reusable and documented components, all UI-elements must be created with [Storybook](https://storybook.js.org/).
+- Monorepo using ~~[Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)~~ or [NX](https://nx.dev/)\*
+- ~~[Emotion](https://emotion.sh/docs/introduction)~~/[Styled Components](https://styled-components.com/)/~~[Styled JSX](https://www.npmjs.com/package/styled-jsx)~~ for CSS-in-JS\*\*
+- [Next API routes](https://vercel.com/guides/using-express-with-vercel) (in addition to a traditional [Express implementation with Node](https://expressjs.com/))***
+- [Storybook](https://storybook.js.org/) for isolated, pure, testable and documented components using****
+- [React Map GL](https://github.com/visgl/react-map-gl) from [VisGL](https://github.com/visgl)*****
 
-As mentioned, TypeScript is enforced, and all shareable types should be shared (following the DRY-principle).
+---
+
+### Notes after some experimenting:
+
+<small>*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects.</small>
+
+<small>**Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore.   
+Styled components has a similar feature set, but is more focused on solutions I don't enjoy. It's what I went with because of the CSS-prop, but in hindsight it brought with it so many complications it's not worth it (for me).  
+Styled JSX seems like a good alternative, by being a lot more simple and robust. It's also the default CSS-in-JS for NEXT.js.  
+Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
+Maybe inline styles and the odd stylesheet isn't such a bad idea after all?
+</small>
+
+<small>***Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more.</small>
+
+<small>****This one's a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please!</small>
+
+<small>*****Meh. The wrapper could've been typed better (so much googling :() and basic features are missing. Spent way to much time trying to get clustering to work with custom components. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
+Couldn't find a good alternative.  
+Big sad.</small>
+
+---
+
