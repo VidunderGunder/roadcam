@@ -1,6 +1,6 @@
 # RoadCam <!-- omit in toc -->
 
-A web app showing road cameras.
+[![picture 1](images/roadcam-demo.png)](https://roadcam.vercel.app/) 
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -114,20 +114,20 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ### Notes after some experimenting:
 
-<small>*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍</small>
+\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
 
-<small>**Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
+\*\*Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
 Styled components has a similar feature set, but is more focused on solutions I don't enjoy. It's what I went with because of the CSS-prop, but in hindsight it brought with it so many complications it's not worth it (for me). 😔  
 Styled JSX seems like a good alternative, by being a lot more simple and robust. It's also the default CSS-in-JS for NEXT.js. 🤔  
 Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
 Maybe inline styles and the odd stylesheet isn't such a bad idea after all? 🤷‍♂️
-</small>
 
-<small>***Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more. 👌</small>
 
-<small>****This one's a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘</small>
+\*\*\*Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more. 👌
 
-<small>*****Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
+\*\*\*\*Storybook is a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘
+
+\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
 Couldn't find a good alternative.  
 Big sad.
 
