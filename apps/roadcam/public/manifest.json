@@ -1,0 +1,9 @@
+{
+  "theme_color": "#007EFF",
+  "background_color": "#191A1A",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "RoadCam",
+  "short_name": "RoadCam"
+}
