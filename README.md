@@ -1,21 +1,21 @@
-# Teleplan Globe Assignment <!-- omit in toc -->
+# RoadCam <!-- omit in toc -->
 
+A web app showing road cameras.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Task](#task)
-  - [Mandatory](#mandatory)
+- [TODO](#todo)
+  - [Minimum](#minimum)
   - [Bonus](#bonus)
-  - [Resources](#resources)
 - [Stack](#stack)
   - [Project Architecture and Main Tools](#project-architecture-and-main-tools)
   - [Notes after some experimenting:](#notes-after-some-experimenting)
 
-## Task
+## TODO
 
 Create a small web application showing road camera information.
 
-### Mandatory
+### Minimum
 
 - [x] Create an Express + Node JS app serving a simple single page web application
 - [x] Get a MapBox development access token and add MapBox to your project
@@ -31,10 +31,10 @@ request from an express HTTP endpoint
 - [ ] Add a search field that displays a filtered list of cameras based on name
 - [ ] Make the list sorted by distance to the user’s current location
 
-### Resources
+<!-- ### Resources
 
 - [Road cameras geoJSON](https://www.dropbox.com/sh/5cibj2j7idvuynw/AACxDaarpU0EI1GR-bG8xXoga?dl=0)
-- [Road camera icon](https://www.dropbox.com/s/kvvpk3rq57jdskd/camera%402x.png?dl=0)
+- [Road camera icon](https://www.dropbox.com/s/kvvpk3rq57jdskd/camera%402x.png?dl=0) -->
 
 ## Stack
 
@@ -84,7 +84,7 @@ I went with NEXT, as it cuts resources spent on development, scalability and dep
 
 It might seem like overkill for a single page application, but given it's as easy to setup as a vanilla React app (if not easier) combined with Vercel's support for SSG and simple (and free) deployment, it makes sense.
 
-React is more familiar to most devs compared to Expo/React Native, so we'll save some time getting them up and running.
+React is more familiar to most devs compared to Expo/React Native, so we'll save some time getting them up and running as well.
 
 PWAs are possible with this alternative, which allows for local app installation and offline support for all major operating systems and devices:
 
