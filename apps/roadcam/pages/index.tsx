@@ -1,10 +1,12 @@
-import { MapView } from '@teleplan-assignment/components';
+import { RoadCamMap, ICamInfo } from '@teleplan-assignment/components';
+import cameras from './road-cameras.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   return (
-    <>
-      {/* <MapMarker /> */}
-      <MapView mapboxToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN} />
-    </>
+    <RoadCamMap
+      mapboxToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+      cameras={cameras.features as ICamInfo[]}
+    />
   );
 }
