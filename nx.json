@@ -21,14 +21,9 @@
   },
   "projects": {
     "roadcam": { "tags": [] },
-    "roadcam-e2e": {
-      "tags": [],
-      "implicitDependencies": ["roadcam"]
-    },
+    "roadcam-e2e": { "tags": [], "implicitDependencies": ["roadcam"] },
     "components": { "tags": [] },
-    "components-e2e": {
-      "tags": [],
-      "implicitDependencies": ["components"]
-    }
+    "components-e2e": { "tags": [], "implicitDependencies": ["components"] },
+    "roadcam-express": { "tags": [] }
   }
 }

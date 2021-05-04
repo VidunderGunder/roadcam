@@ -13,10 +13,10 @@ export default {
   },
 } as Meta;
 
-export const WithoutCameraInfo = () => {
-  return <MapMarker label={text('Label', 'Marker Label')} />;
-};
-
 export const WithCameraInfo = () => {
   return <MapMarker label={text('Label', 'Marker Label')} cam={camExample} />;
+};
+
+export const WithoutCameraInfo = () => {
+  return <MapMarker label={text('Label', 'Marker Label')} />;
 };

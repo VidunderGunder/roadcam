@@ -1,11 +1,20 @@
 {
   "version": 2,
-  "cli": { "defaultCollection": "@nrwl/next" },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
   "defaultProject": "roadcam",
   "generators": {
-    "@nrwl/react": { "application": { "babel": true } },
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
     "@nrwl/next": {
-      "application": { "style": "styled-components", "linter": "eslint" }
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint"
+      }
     }
   },
   "projects": {
@@ -16,16 +25,23 @@
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "root": "apps/roadcam",
             "outputPath": "dist/apps/roadcam"
           },
-          "configurations": { "production": {} }
+          "configurations": {
+            "production": {}
+          }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": { "buildTarget": "roadcam:build", "dev": true },
+          "options": {
+            "buildTarget": "roadcam:build",
+            "dev": true
+          },
           "configurations": {
             "production": {
               "buildTarget": "roadcam:build:production",
@@ -35,11 +51,15 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": { "buildTarget": "roadcam:build:production" }
+          "options": {
+            "buildTarget": "roadcam:build:production"
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/roadcam"],
+          "outputs": [
+            "coverage/apps/roadcam"
+          ],
           "options": {
             "jestConfig": "apps/roadcam/jest.config.js",
             "passWithNoTests": true
@@ -48,7 +68,9 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/roadcam/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/roadcam/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         }
       }
@@ -66,12 +88,18 @@
             "devServerTarget": "roadcam:serve"
           },
           "configurations": {
-            "production": { "devServerTarget": "roadcam:serve:production" }
+            "production": {
+              "devServerTarget": "roadcam:serve:production"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["apps/roadcam-e2e/**/*.{js,ts}"] }
+          "options": {
+            "lintFilePatterns": [
+              "apps/roadcam-e2e/**/*.{js,ts}"
+            ]
+          }
         }
       }
     },
@@ -83,12 +111,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/components/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "libs/components/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/components"],
+          "outputs": [
+            "coverage/libs/components"
+          ],
           "options": {
             "jestConfig": "libs/components/jest.config.js",
             "passWithNoTests": true
@@ -99,19 +131,33 @@
           "options": {
             "uiFramework": "@storybook/react",
             "port": 4400,
-            "config": { "configFolder": "libs/components/.storybook" }
+            "config": {
+              "configFolder": "libs/components/.storybook"
+            }
           },
-          "configurations": { "ci": { "quiet": true } }
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         },
         "build-storybook": {
           "executor": "@nrwl/storybook:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "uiFramework": "@storybook/react",
             "outputPath": "dist/storybook/components",
-            "config": { "configFolder": "libs/components/.storybook" }
+            "config": {
+              "configFolder": "libs/components/.storybook"
+            }
           },
-          "configurations": { "ci": { "quiet": true } }
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       }
     },
@@ -128,13 +174,75 @@
             "devServerTarget": "components:storybook"
           },
           "configurations": {
-            "ci": { "devServerTarget": "components:storybook:ci" }
+            "ci": {
+              "devServerTarget": "components:storybook:ci"
+            }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/components-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/components-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "roadcam-express": {
+      "root": "apps/roadcam-express",
+      "sourceRoot": "apps\\roadcam-express\\src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/roadcam-express",
+            "main": "apps/roadcam-express/src/main.ts",
+            "tsConfig": "apps/roadcam-express/tsconfig.app.json",
+            "assets": [
+              "apps/roadcam-express/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/roadcam-express/src/environments/environment.ts",
+                  "with": "apps/roadcam-express/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "roadcam-express:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/roadcam-express/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/roadcam-express"
+          ],
+          "options": {
+            "jestConfig": "apps/roadcam-express/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
