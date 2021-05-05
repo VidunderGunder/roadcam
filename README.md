@@ -10,7 +10,7 @@ Monorepo experiment to test out a bunch of frameworks and libraries.
 - [End result](#end-result)
 - [What frameworks to use?](#what-frameworks-to-use)
 - [Project Architecture and Main Tools](#project-architecture-and-main-tools)
-- [Bonus: MongoDB](#bonus-mongodb)
+- [MongoDB](#mongodb)
 
 ## TODO
 
@@ -157,7 +157,7 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ---
 
-## Bonus: MongoDB
+## MongoDB
 
 I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so we don't need to do any hosting or maintenance ourselves.
 
