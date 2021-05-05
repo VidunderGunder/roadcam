@@ -41,12 +41,11 @@ request from an express HTTP endpoint
 - NEXT.js Frontend<sup>Live!</sup>
 - NEXT.js Serverless Express Backend<sup>Live!</sup>  
 *Data alternatives:*
-  1. Data directly available to client
-  2. Data hosted on MongoDB Atlas
-  3. Data hosted on Vercel
+  - Data hosted on Vercel
+  - Data hosted on MongoDB Atlas
 - Node Express Backend  
 *Data alternatives:*
-  - Data hosted locally
+  - Data hosted om server
   - Data hosted on MongoDB Atlas
 - React Library with Storybook for components
 - React Map GL from VisGL as Mapbox GL-wrapper
