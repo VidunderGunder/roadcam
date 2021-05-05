@@ -27,7 +27,7 @@ request from an express HTTP endpoint
 
 ### Bonus
 
-- [ ] Store and fetch the camera locations from a Mongo DB database
+- [x] Store and fetch the camera locations from a Mongo DB database
 - [ ] Add a search field that displays a filtered list of cameras based on name
 - [ ] Make the list sorted by distance to the user’s current location
 
