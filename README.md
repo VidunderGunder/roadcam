@@ -36,20 +36,27 @@ request from an express HTTP endpoint
 ## End result
 
 - Monorepo with NX
+  - TypeScript everything
+  - Jest + Cypress for testing
+  - Styled Components for CSS-in-JS
 - NEXT.js Frontend<sup>Live!</sup>
-- NEXT.js Serverless Express Backend<sup>Live!</sup>
-  - Data directly available to client
-  - Data hosted on MongoDB Atlas
-  - Data hosted on Vercel
-- Node Express Backend
+- NEXT.js Serverless Express Backend<sup>Live!</sup>  
+*Data alternatives:*
+  1. Data directly available to client
+  2. Data hosted on MongoDB Atlas
+  3. Data hosted on Vercel
+- Node Express Backend  
+*Data alternatives:*
   - Data hosted locally
   - Data hosted on MongoDB Atlas
 - React Library with Storybook for components
+- React Map GL from VisGL as Mapbox GL-wrapper
 
 ---
 
 >_Below are some rambling notes I jotted down as I went._  
->_I would probably skip reading it if I was you._ 😉
+>_TL;DR in the list above._ 👆  
+>_I would probably skip reading the rest if I was you._ 😉
 
 ---
 
