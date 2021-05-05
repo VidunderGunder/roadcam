@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 import { CamInfo, camExample } from './cam-info';
 
 export default {
-  title: 'CamInfo',
+  title: 'Camera Info Modal',
   component: CamInfo,
   parameters: {
     layout: 'centered',

@@ -77,7 +77,10 @@ export const CamInfo: React.VFC<CamInfoProps> = ({
       <Modal
         show={show}
         centered
-        onHide={onHide}
+        onHide={() => {
+          setShowData(false);
+          onHide();
+        }}
         contentClassName="bg-dark text-light shadow-lg"
       >
         <Modal.Header

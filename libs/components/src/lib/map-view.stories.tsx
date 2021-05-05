@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import { MapView, IMapViewProps } from './map-view';
 
 export default {
-  title: 'MapView',
+  title: 'Map View',
   component: MapView,
 } as Meta;
 

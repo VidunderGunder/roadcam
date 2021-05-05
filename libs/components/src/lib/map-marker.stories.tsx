@@ -6,7 +6,7 @@ import { camExample } from './cam-info';
 import { use100vh } from 'react-div-100vh';
 
 export default {
-  title: 'MapMarker',
+  title: 'Camera Map Marker',
   component: MapMarker,
   parameters: {
     layout: 'centered',

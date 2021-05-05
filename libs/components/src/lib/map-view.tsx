@@ -20,6 +20,7 @@ export interface IMapViewProps extends InteractiveMapProps {
   defaultZoom?: number;
   defaultBearing?: number;
   defaultPitch?: number;
+  disable: boolean;
 }
 
 export const MapView: React.FC<IMapViewProps> = ({
@@ -29,6 +30,7 @@ export const MapView: React.FC<IMapViewProps> = ({
   defaultZoom = 6,
   defaultBearing = 0,
   defaultPitch = 0,
+  disable = false,
   ...props
 }) => {
   const height = use100vh();
@@ -56,9 +58,10 @@ export const MapView: React.FC<IMapViewProps> = ({
         width="100%"
         height="100%"
         mapStyle="mapbox://styles/mapbox/dark-v10"
-        onViewportChange={(nextViewport: MapboxStateSet) =>
-          setViewport(nextViewport)
-        }
+        onViewportChange={(nextViewport: MapboxStateSet) => {
+          if (disable) return;
+          setViewport(nextViewport);
+        }}
         mapboxApiAccessToken={mapboxToken}
         {...props}
       >

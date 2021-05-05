@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CameraIcon from './camera-icon';
+import CameraIcon from './cam-icon';
 import { CamInfo, ICamInfo } from './cam-info';
 
 export interface IMapMarkerProps {

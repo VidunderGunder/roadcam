@@ -5,7 +5,7 @@ import { FullscreenMessage } from './fullscreen-message';
 
 export default {
   component: FullscreenMessage,
-  title: 'FullscreenMessage',
+  title: 'Fullscreen Message',
 } as Meta;
 
 export const primary = () => {
