@@ -53,15 +53,14 @@ All proposals will be using [TypeScript](https://www.typescriptlang.org/) where 
 
 ---
 
-✅ **[NEXT](https://nextjs.org/) with [Express Middleware](https://nextjs.org/docs/api-routes/api-middlewares)**
+✅ **[NEXT](https://nextjs.org/) with [Express using API Routes](https://vercel.com/guides/using-express-with-vercel)**
 
 - Fully supported by [NX](https://nx.dev/latest/react/guides/nextjs)
-- Instant deployment and hosting using [Vercel](https://vercel.com/)
-- Server Side Rendering (SSR) out-of-the-box
-- Static Site Generation (SSG) out-of-the-box
-- Simple routing 
+- Instant deployment and hosting using [Vercel](https://vercel.com/) for free
+- Serverless functions
+- Static Site Generation (SSG) and Server Side Rendering (SSR) out-of-the-box
 - [Supports Unity3D with API](https://www.npmjs.com/package/react-unity-webgl)  
-([SSR workaround available](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790525055) and [SSR is in the pipeline](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790476259))
+_([SSR workaround available](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790525055) and [SSR is in the pipeline](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790476259))_
 
 _NEXT is a product of Vercel, so implementation may be more stable and developer friendly than other alternatives_
 
@@ -72,7 +71,7 @@ _NEXT is a product of Vercel, so implementation may be more stable and developer
 ~~Using [React Native for Web](https://docs.expo.io/workflow/web/).~~
 
 - ~~Instant deployment and hosting using [Vercel](https://vercel.com/)~~
-- ~~[Supports Unity3D view only](https://www.npmjs.com/package/react-unity-webgl)~~
+- ~~[Supports Unity3D view only](https://www.npmjs.com/package/react-unity-webgl)~~  
 ~~_API between Unity3D and the different platforms can be done, but requires native implementations for all platforms._~~
 - ~~Native Apps for iOS and Android using the same codebase~~
 
@@ -135,13 +134,13 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ### Bonus: MongoDB
 
-I'll use MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so we don't need to do hosting and maintenance ourselves.
+I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so we don't need to do any hosting or maintenance ourselves.
 
 ---
 
 >#### Notes and thoughts
 >
->After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how bad the developer experience using MongoDB actually is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
+>After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how bad some of the developer experience using MongoDB actually is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
 >
 >I will most likely try to find something else for upcoming projects.
 >
