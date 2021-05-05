@@ -20,7 +20,7 @@ export interface IMapViewProps extends InteractiveMapProps {
   defaultZoom?: number;
   defaultBearing?: number;
   defaultPitch?: number;
-  disable: boolean;
+  disable?: boolean;
 }
 
 export const MapView: React.FC<IMapViewProps> = ({
