@@ -2,6 +2,8 @@
 
 [![picture 1](images/roadcam-demo.png)](https://roadcam.vercel.app/) 
 
+Monorepo experiment to test out a bunch of frameworks and libraries.
+
 ## Table of Contents <!-- omit in toc -->
 
 - [TODO](#todo)
@@ -15,8 +17,6 @@
 
 Create a small web application showing road camera information.
 
-### Minimum
-
 - [x] Create an Express + Node JS app serving a simple single page web application
 - [x] Get a MapBox development access token and add MapBox to your project
 - [x] Download the data file (see resources below) and add it to your project
@@ -24,17 +24,34 @@ Create a small web application showing road camera information.
 - [x] Add a marker for every road camera in the map view by loading them using a fetch GET
 request from an express HTTP endpoint
 - [x] Clicking a camera in the map should display information in a popup
-
-### Bonus
-
 - [x] Store and fetch the camera locations from a Mongo DB database
-- [ ] Add a search field that displays a filtered list of cameras based on name
-- [ ] Make the list sorted by distance to the user’s current location
+- [x] Add a search field that displays a filtered list of cameras based on name
+- [x] Make the list sorted by distance to the user’s current location
 
 <!-- ### Resources
 
 - [Road cameras geoJSON](https://www.dropbox.com/sh/5cibj2j7idvuynw/AACxDaarpU0EI1GR-bG8xXoga?dl=0)
 - [Road camera icon](https://www.dropbox.com/s/kvvpk3rq57jdskd/camera%402x.png?dl=0) -->
+
+## End result
+
+- Monorepo with NX
+- NEXT.js Frontend<sup>Live!</sup>
+- NEXT.js Serverless Express Backend<sup>Live!</sup>
+  - Data directly available to client
+  - Data hosted on MongoDB Atlas
+  - Data hosted on Vercel
+- Node Express Backend
+  - Data hosted locally
+  - Data hosted on MongoDB Atlas
+- React Library with Storybook for components
+
+---
+
+>_Below are some rambling notes I jotted down as I went._  
+>_I would probably skip reading it if I was you._ 😉
+
+---
 
 ## Stack
 
@@ -111,7 +128,7 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ---
 
->#### Notes after some experimenting:
+>#### Opinions after some experimenting
 >
 >\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
 >
@@ -138,9 +155,11 @@ I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so 
 
 ---
 
->#### Notes and thoughts
+>#### How was MongoDB?
 >
->After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how bad some of the developer experience using MongoDB actually is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
+>It's been some time since I've used MongeDB...
+>
+>After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how cumbersome some of the developer experience is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
 >
 >I will most likely try to find something else for upcoming projects.
 >
