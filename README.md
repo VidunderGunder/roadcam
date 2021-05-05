@@ -165,9 +165,9 @@ I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so 
 
 >### How was MongoDB?
 >
->It's been some time since I've used MongeDB...
+>It's been some time since I've used MongoDB...
 >
->After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how cumbersome some of the developer experience is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
+>After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how cumbersome some of the developer experience is for MongoDB - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
 >
 >I will most likely try to find something else for upcoming projects.
 >
