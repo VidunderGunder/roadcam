@@ -7,11 +7,10 @@ Monorepo experiment to test out a bunch of frameworks and libraries.
 ## Table of Contents <!-- omit in toc -->
 
 - [TODO](#todo)
-  - [Minimum](#minimum)
-  - [Bonus](#bonus)
-- [Stack](#stack)
-  - [Project Architecture and Main Tools](#project-architecture-and-main-tools)
-  - [Notes after some experimenting:](#notes-after-some-experimenting)
+- [End result](#end-result)
+- [What frameworks to use?](#what-frameworks-to-use)
+- [Project Architecture and Main Tools](#project-architecture-and-main-tools)
+- [Bonus: MongoDB](#bonus-mongodb)
 
 ## TODO
 
@@ -60,9 +59,9 @@ request from an express HTTP endpoint
 
 ---
 
-## Stack
+## What frameworks to use?
 
-All proposals will be using [TypeScript](https://www.typescriptlang.org/) where possible (some configuration files may be omitted).
+All proposals are using [TypeScript](https://www.typescriptlang.org/) where possible (some configuration files may be omitted).
 
 ---
 
@@ -123,7 +122,7 @@ This is likely to change when PWAs become more widespread, though, assuming anti
 
 Having all React-libraries at disposal is a huge plus (as opposed to React Native/Expo); especially the possibility to use Unity builds, in case we want to move map navigation or other features to a more solid 3D-environment down the line.
 
-### Project Architecture and Main Tools
+## Project Architecture and Main Tools
 
 Well yeah... This may be a mess, or it may be awesome. I'll explore some new stuff I haven't really used before, so it'll be hit or miss for some of 'em:
 
@@ -135,7 +134,7 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ---
 
->#### Opinions after some experimenting
+>### Opinions after some experimenting
 >
 >\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
 >
@@ -158,13 +157,13 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ---
 
-### Bonus: MongoDB
+## Bonus: MongoDB
 
 I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so we don't need to do any hosting or maintenance ourselves.
 
 ---
 
->#### How was MongoDB?
+>### How was MongoDB?
 >
 >It's been some time since I've used MongeDB...
 >
