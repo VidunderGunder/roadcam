@@ -150,6 +150,8 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 >
 >\*\*\*\*Storybook is a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘
 >
+>![picture 1](images/storybook.png)  
+>
 >\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
 >Couldn't find a good alternative.  
 >Big sad.
