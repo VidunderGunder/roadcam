@@ -53,15 +53,15 @@ export const RoadCamMap: React.VFC<RoadCamMapProps> = ({
       {...props}
       style={{ zIndex: loading || error || cameras.length === 0 ? 0 : 0 }}
     >
-      {loading && <FullscreenMessage>Fetching cameras...</FullscreenMessage>}
-      {error && (
+      {loading ? (
+        <FullscreenMessage>Fetching cameras...</FullscreenMessage>
+      ) : error ? (
         <FullscreenMessage>
           Something went wrong. Refresh or contact site owner.
         </FullscreenMessage>
-      )}
-      {cameras.length === 0 && (
+      ) : !loading && !error && cameras.length === 0 ? (
         <FullscreenMessage>No cameras available.</FullscreenMessage>
-      )}
+      ) : null}
       <Cameras cameras={cameras} />
     </MapView>
   );

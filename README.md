@@ -112,24 +112,41 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 
 ---
 
-### Notes after some experimenting:
-
-\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
-
-\*\*Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
-Styled components has a similar feature set, but is more focused on solutions I don't enjoy. It's what I went with because of the CSS-prop, but in hindsight it brought with it so many complications it's not worth it (for me). 😔  
-Styled JSX seems like a good alternative, by being a lot more simple and robust. It's also the default CSS-in-JS for NEXT.js. 🤔  
-Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
-Maybe inline styles and the odd stylesheet isn't such a bad idea after all? 🤷‍♂️
-
-
-\*\*\*Free serverless functions hosted on Vercel? Sign me up. Code needs some small modifications, but the overall setup is a lot cleaner than having a separate backend - especially for smaller projects. Might start using this more. 👌
-
-\*\*\*\*Storybook is a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘
-
-\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
-Couldn't find a good alternative.  
-Big sad.
+>#### Notes after some experimenting:
+>
+>\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
+>
+>\*\*Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
+>Styled components has a similar feature set, but is more focused on solutions >I don't enjoy. It's what I went with because of the CSS-prop, but in >hindsight it brought with it so many complications it's not worth it (for me)>. 😔  
+>Styled JSX seems like a good alternative, being a lot simpler while avoiding some pitfalls of Emotion and Styled Components. It's also the default CSS-in-JS for NEXT.js. 🤔  
+>Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
+>Maybe inline styles and the odd stylesheet isn't such a bad idea after all? 🤷‍♂️
+>
+>
+>\*\*\*Free serverless functions hosted on Vercel? Sign me up. Code needs some >small modifications, but the overall setup is a lot cleaner than having a >separate backend - especially for smaller projects. Might start using this more. 👌
+>
+>\*\*\*\*Storybook is a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘
+>
+>\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
+>Couldn't find a good alternative.  
+>Big sad.
 
 ---
 
+### Bonus: MongoDB
+
+I'll use MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so we don't need to do hosting and maintenance ourselves.
+
+---
+
+>#### Notes and thoughts
+>
+>After playing with tools like NX, Next, Vercel, Docker and InfluxDB, I am surprised at how bad the developer experience using MongoDB actually is - especially for newcomers. When you're one of the database big boys™ 💪 your cloud hosted DB should support drag 'n' drop uploads for basic things like JSON-data. I'm just saying.
+>
+>I will most likely try to find something else for upcoming projects.
+>
+>Maybe a solution where types can be defined once in a monorepo and reused by the frontend and backend would be nice? 🤔💭
+>
+>Maybe something in the realm of GraphQL would be best, when I want to define types anyway.
+
+---
