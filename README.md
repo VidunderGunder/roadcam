@@ -3,34 +3,14 @@
 [![picture 1](images/roadcam-demo.png)](https://roadcam.vercel.app/) 
 
 Monorepo experiment to test out a bunch of frameworks and libraries.
+We'll create a small web application showing road camera information.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [TODO](#todo)
 - [End result](#end-result)
 - [What frameworks to use?](#what-frameworks-to-use)
 - [Project Architecture and Main Tools](#project-architecture-and-main-tools)
 - [MongoDB](#mongodb)
-
-## TODO
-
-Create a small web application showing road camera information.
-
-- [x] Create an Express + Node JS app serving a simple single page web application
-- [x] Get a MapBox development access token and add MapBox to your project
-- [x] Download the data file (see resources below) and add it to your project
-- [x] Download the icon file (see resources below) and add it to your project
-- [x] Add a marker for every road camera in the map view by loading them using a fetch GET
-request from an express HTTP endpoint
-- [x] Clicking a camera in the map should display information in a popup
-- [x] Store and fetch the camera locations from a Mongo DB database
-- [x] Add a search field that displays a filtered list of cameras based on name
-- [x] Make the list sorted by distance to the user’s current location
-
-<!-- ### Resources
-
-- [Road cameras geoJSON](https://www.dropbox.com/sh/5cibj2j7idvuynw/AACxDaarpU0EI1GR-bG8xXoga?dl=0)
-- [Road camera icon](https://www.dropbox.com/s/kvvpk3rq57jdskd/camera%402x.png?dl=0) -->
 
 ## End result
 
