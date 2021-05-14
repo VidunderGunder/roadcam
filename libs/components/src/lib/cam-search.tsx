@@ -1,6 +1,6 @@
 import React, { Dispatch, Fragment, useMemo, useState } from 'react';
 import { CamInfo, ICamInfo } from './cam-info';
-import distance, { distanceSq } from './distance';
+import distance from './distance';
 import { SearchBar } from './search-bar';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -44,10 +44,9 @@ export const CamSearch: React.FC<CamSearchProps & CommonProps> = ({
   const sortedCameras = useMemo(
     () =>
       cameras.sort((a, b) => {
-        // Using squared distance to skimp on square roots
         return (
-          distanceSq([...position], [...a.geometry.coordinates]) -
-          distanceSq([...position], [...b.geometry.coordinates])
+          distance([...position], [...a.geometry.coordinates]) -
+          distance([...position], [...b.geometry.coordinates])
         );
       }),
     [cameras, position]
