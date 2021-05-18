@@ -1,0 +1,80 @@
+{
+  "extensions": {
+    "recommendations": [],
+    "unwantedRecommendations": []
+  },
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "launch": {
+    "compounds": [],
+    "configurations": [
+      {
+        "name": "JS",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}",
+        "cwd": "${workspaceFolder}",
+        "outputCapture": "std"
+      },
+      {
+        // 支持参数启动
+        "name": "JS-CONFIG",
+        "type": "node",
+        // linux $ xvfb-run -s "-ac -screen 0 1280x1024x24" node src/puppeteer.js b
+        // https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration-support-for-npm-and-other-tools
+        "runtimeExecutable": "xvfb-run",
+        "runtimeArgs": ["-s", "-ac -screen 0 1280x1024x24", "node"],
+        "request": "launch",
+        "program": "${file}",
+        "cwd": "${workspaceFolder}",
+        "outputCapture": "std",
+        "env": {
+          "DISPLAY": ":0"
+        }
+      },
+      {
+        "name": "TS-NODE",
+        "type": "node",
+        "request": "launch",
+        "runtimeArgs": ["-r", "ts-node/register"],
+        "args": ["${file}"]
+      },
+      {
+        "name": "Webpack",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
+        "args": ["--config=build/webpack.build-lib.js"]
+      },
+      {
+        "name": "Jest",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/.bin/jest",
+        "args": [
+          "--testPathPattern=${file}",
+          "--config=jest.config.js",
+          "--runInBand"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "disableOptimisticBPs": true
+      },
+      {
+        "name": "Python",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal"
+      }
+    ]
+  },
+  "settings": {},
+  "tasks": {
+    "tasks": [],
+    "version": "2.0.0"
+  }
+}
