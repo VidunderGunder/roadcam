@@ -1,6 +1,6 @@
 # RoadCam <!-- omit in toc -->
 
-[![picture 1](images/roadcam-demo.png)](https://roadcam.vercel.app/) 
+[![picture 1](images/roadcam-demo.png)](https://roadcam.vercel.app/)
 
 Monorepo experiment to test out a bunch of frameworks and libraries.
 We'll create a small web application showing road camera information.
@@ -19,11 +19,11 @@ We'll create a small web application showing road camera information.
   - Jest + Cypress for testing
   - Styled Components for CSS-in-JS
 - NEXT.js Frontend<sup>Live!</sup>
-- NEXT.js Serverless Express Backend<sup>Live!</sup>  
+- NEXT.js Serverless Express Backend<sup>Live!</sup>
 *Data alternatives:*
   - Data hosted on Vercel
   - Data hosted on MongoDB Atlas
-- Node Express Backend  
+- Node Express Backend
 *Data alternatives:*
   - Data hosted om server
   - Data hosted on MongoDB Atlas
@@ -32,8 +32,8 @@ We'll create a small web application showing road camera information.
 
 ---
 
->_Below are some rambling notes I jotted down as I went._  
->_TL;DR in the list above._ 👆  
+>_Below are some rambling notes I jotted down as I went._
+>_TL;DR in the list above._ 👆
 >_I would probably skip reading the rest if I was you._ 😉
 
 ---
@@ -61,7 +61,7 @@ All proposals are using [TypeScript](https://www.typescriptlang.org/) where poss
 - Instant deployment and hosting using [Vercel](https://vercel.com/) for free
 - Serverless functions
 - Static Site Generation (SSG) and Server Side Rendering (SSR) out-of-the-box
-- [Supports Unity3D with API](https://www.npmjs.com/package/react-unity-webgl)  
+- [Supports Unity3D with API](https://www.npmjs.com/package/react-unity-webgl)
 _([SSR workaround available](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790525055) and [SSR is in the pipeline](https://github.com/jeffreylanters/react-unity-webgl/issues/139#issuecomment-790476259))_
 
 _NEXT is a product of Vercel, so implementation may be more stable and developer friendly than other alternatives_
@@ -73,7 +73,7 @@ _NEXT is a product of Vercel, so implementation may be more stable and developer
 ~~Using [React Native for Web](https://docs.expo.io/workflow/web/).~~
 
 - ~~Instant deployment and hosting using [Vercel](https://vercel.com/)~~
-- ~~[Supports Unity3D view only](https://www.npmjs.com/package/react-unity-webgl)~~  
+- ~~[Supports Unity3D view only](https://www.npmjs.com/package/react-unity-webgl)~~
 ~~_API between Unity3D and the different platforms can be done, but requires native implementations for all platforms._~~
 - ~~Native Apps for iOS and Android using the same codebase~~
 
@@ -117,10 +117,10 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 >
 >\*Yarn Workspaces was a drag, as it's too low level. NX is a joy to work with, and I'll probably use it as a default for any upcoming projects. 👍
 >
->\*\*Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤   
->Styled components has a similar feature set, but is more focused on solutions >I don't enjoy. It's what I went with because of the CSS-prop, but in >hindsight it brought with it so many complications it's not worth it (for me)>. 😔  
->Styled JSX seems like a good alternative, being a lot simpler while avoiding some pitfalls of Emotion and Styled Components. It's also the default CSS-in-JS for NEXT.js. 🤔  
->Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.  
+>\*\*Emotion has turned their package naming on its head with v11, and so nothing works out-of-the-box anymore. 😤
+>Styled components has a similar feature set, but is more focused on solutions >I don't enjoy. It's what I went with because of the CSS-prop, but in >hindsight it brought with it so many complications it's not worth it (for me)>. 😔
+>Styled JSX seems like a good alternative, being a lot simpler while avoiding some pitfalls of Emotion and Styled Components. It's also the default CSS-in-JS for NEXT.js. 🤔
+>Maybe good old SASS would be a better solution, but I'm not a fan of leaking styles all over the place, while separating styles from components.
 >Maybe inline styles and the odd stylesheet isn't such a bad idea after all? 🤷‍♂️
 >
 >
@@ -128,10 +128,10 @@ Well yeah... This may be a mess, or it may be awesome. I'll explore some new stu
 >
 >\*\*\*\*Storybook is a winner. Makes it sooo much more fun to create components that are actually reusable (even across apps and frameworks). Add NX's auto-setup on top of that? Yes, please! 💘
 >
->![picture 1](images/storybook.png)  
+>![picture 1](images/storybook.png)
 >
->\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.  
->Couldn't find a good alternative.  
+>\*\*\*\*\*`react-map-gl`? Meh. The wrapper could've been typed better (so much googling 🥵) and basic features are missing. Spent way to much time trying to get clustering to work with custom components, but it sadly isn't supported here. There's <a href="https://github.com/urbica/react-map-gl">Urbica's React library for mapbox-gl</a>, which offers features one would expect from a basic map library, but it isn't typed at all.
+>Couldn't find a good alternative.
 >Big sad.
 
 ---
@@ -155,3 +155,18 @@ I used MongoDB's [Atlas](https://www.mongodb.com/cloud/atlas) as a database, so 
 >Maybe something in the realm of GraphQL would be best, when I want to define types anyway.
 
 ---
+
+## Develop
+
+### local
+
+cd /media/marcio/HDD/dados/roadcam
+
+code --new-window vscode.code-workspace
+
+### devcontainer
+
+npm i -g vercel
+vercel
+
+npm run start
